@@ -1,0 +1,19 @@
+{
+	"name": "awecodebox/timetable",
+	"description": "Build your custom Timetable with ease",
+	"type": "project",
+	"license": "GPL-3.0-or-later",
+	"autoload": {
+		"psr-4": {
+			"Timetable\\": "",
+			"Timetable\\Admin\\": "admin/"
+		}
+	},
+	"authors": [
+		{
+			"name": "Sina Shamsizadeh",
+			"email": "sina.shams73@gmail.com"
+		}
+	],
+	"require": {}
+}

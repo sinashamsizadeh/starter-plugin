@@ -1,0 +1,26 @@
+{
+	"name": "timetable",
+	"version": "1.0.0",
+	"dependencies": {
+		"@wordpress/scripts": "^25.3.0",
+		"react-dom": "^18.2.0",
+		"react-redux": "^8.0.5"
+	},
+	"scripts": {
+		"build": "wp-scripts build",
+		"format": "wp-scripts format",
+		"lint:js": "wp-scripts lint-js",
+		"start": "wp-scripts start",
+		"start:hot": "wp-scripts start --hot",
+		"packages-update": "wp-scripts packages-update",
+		"wp-env": "wp-env",
+		"make:pot": "wp i18n make-pot . languages/cfb.pot",
+		"make:json": "po2json ./languages/cfb-fa_IR.po ./languages/cfb-fa_IR-climax-form-builder-script.json -p --format jed"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	}
+}
