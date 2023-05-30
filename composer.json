@@ -1,13 +1,13 @@
 {
-	"name": "awecodebox/timetable",
-	"description": "Build your custom Timetable with ease",
+	"name": "awecodebox/starter",
+	"description": "Build your custom Starter with ease",
 	"type": "project",
 	"license": "GPL-3.0-or-later",
 	"autoload": {
 		"psr-4": {
-			"Timetable\\": "",
-			"Timetable\\Admin\\": "admin/",
-			"Timetable\\Includes\\": "includes/"
+			"Starter\\": "",
+			"Starter\\Admin\\": "admin/",
+			"Starter\\Includes\\": "includes/"
 		}
 	},
 	"authors": [

@@ -1,5 +1,5 @@
 {
-	"name": "timetable",
+	"name": "starter",
 	"version": "1.0.0",
 	"dependencies": {
 		"@emotion/react": "^11.10.5",
@@ -23,8 +23,8 @@
 		"start:hot": "wp-scripts start --hot",
 		"packages-update": "wp-scripts packages-update",
 		"wp-env": "wp-env",
-		"make:pot": "wp i18n make-pot . languages/timetable.pot",
-		"make:json": "po2json ./languages/timetable-fa_IR.po ./languages/timetable-fa_IR-climax-form-builder-script.json -p --format jed"
+		"make:pot": "wp i18n make-pot . languages/starter.pot",
+		"make:json": "po2json ./languages/starter-fa_IR.po ./languages/starter-fa_IR-climax-form-builder-script.json -p --format jed"
 	},
 	"eslintConfig": {
 		"extends": [

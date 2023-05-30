@@ -7,5 +7,5 @@ ReactDOM.render(
 	<Provider store={ store }>
 		<App />
 	</Provider>,
-	document.getElementById( 'timetable' )
+	document.getElementById( 'starter' )
 );

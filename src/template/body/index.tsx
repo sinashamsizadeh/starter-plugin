@@ -1,29 +1,29 @@
 import { Fragment } from 'react';
 import { Route, Routes, useSearchParams } from 'react-router-dom';
 import Dashboard from './component/dashboard/index';
-import Timetable from './component/timetable/index';
+import Starter from './component/starter/index';
 import Analytics from './component/analytics/index';
 import Settings from './component/settings/index';
 
 const Body = () => {
-	const timetableRoute = () => {
+	const starterRoute = () => {
 		const [ searchParams ] = useSearchParams();
 
 		switch ( searchParams.get( 'page' ) ) {
-			case 'timetable-dashboard':
+			case 'starter-dashboard':
 				return <Dashboard />;
-			case 'timetable':
-				return <Timetable />;
-			case 'timetable-analytics':
+			case 'starter':
+				return <Starter />;
+			case 'starter-analytics':
 				return <Analytics />;
-			case 'timetable-settings':
+			case 'starter-settings':
 				return <Settings />;
 		}
 	};
 
 	return (
 		<Routes>
-			<Route path={ location.pathname } element={ timetableRoute() } />
+			<Route path={ location.pathname } element={ starterRoute() } />
 		</Routes>
 	);
 };

@@ -13,49 +13,49 @@ import SettingsIcon from '@mui/icons-material/Settings';
 const NavMenu = () => {
 	return (
 		<MenuList>
-			<Link to="?page=timetable-dashboard" relative="path">
+			<Link to="?page=starter-dashboard" relative="path">
 				<MenuItem>
 					<ListItemIcon>
 						<DashboardIcon fontSize="small" />
 					</ListItemIcon>
 					<ListItemText>
-						{ __( 'Dashboard', 'timetable' ) }
+						{ __( 'Dashboard', 'starter' ) }
 					</ListItemText>
 				</MenuItem>
 			</Link>
 
 			<Divider />
-			<Link to="?page=timetable" relative="path">
+			<Link to="?page=starter" relative="path">
 				<MenuItem>
 					<ListItemIcon>
 						<CalendarMonthIcon fontSize="small" />
 					</ListItemIcon>
 					<ListItemText>
-						{ __( 'Timetables', 'timetable' ) }
+						{ __( 'Starters', 'starter' ) }
 					</ListItemText>
 				</MenuItem>
 			</Link>
 
 			<Divider />
-			<Link to="?page=timetable-analytics" relative="path">
+			<Link to="?page=starter-analytics" relative="path">
 				<MenuItem>
 					<ListItemIcon>
 						<BarChartIcon fontSize="small" />
 					</ListItemIcon>
 					<ListItemText>
-						{ __( 'Analytics', 'timetable' ) }
+						{ __( 'Analytics', 'starter' ) }
 					</ListItemText>
 				</MenuItem>
 			</Link>
 
 			<Divider />
-			<Link to="?page=timetable-settings" relative="path">
+			<Link to="?page=starter-settings" relative="path">
 				<MenuItem>
 					<ListItemIcon>
 						<SettingsIcon fontSize="small" />
 					</ListItemIcon>
 					<ListItemText>
-						{ __( 'Settings', 'timetable' ) }
+						{ __( 'Settings', 'starter' ) }
 					</ListItemText>
 				</MenuItem>
 			</Link>

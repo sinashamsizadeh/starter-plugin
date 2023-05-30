@@ -2,7 +2,7 @@ import { Grid, Box } from '@mui/material';
 import { __ } from '@wordpress/i18n';
 import AddNewButton from './addNewButton';
 
-const Timetable = () => {
+const Starter = () => {
 	return (
 		<Grid
 			container
@@ -16,7 +16,7 @@ const Timetable = () => {
 		>
 			<Grid item xs={ 12 }>
 				<Box>
-					<h1>{ __( 'Timetable', 'timetable' ) }</h1>
+					<h1>{ __( 'Starter', 'starter' ) }</h1>
 					<AddNewButton />
 				</Box>
 			</Grid>
@@ -24,4 +24,4 @@ const Timetable = () => {
 	);
 };
 
-export default Timetable;
+export default Starter;

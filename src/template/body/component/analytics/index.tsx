@@ -15,7 +15,7 @@ const Analytics = () => {
 		>
 			<Grid item xs={ 12 }>
 				<Box>
-					<h1>{ __( 'Analytics', 'timetable' ) }</h1>
+					<h1>{ __( 'Analytics', 'starter' ) }</h1>
 				</Box>
 			</Grid>
 		</Grid>

@@ -15,7 +15,7 @@ const Settings = () => {
 		>
 			<Grid item xs={ 12 }>
 				<Box>
-					<h1>{ __( 'Settings', 'timetable' ) }</h1>
+					<h1>{ __( 'Settings', 'starter' ) }</h1>
 				</Box>
 			</Grid>
 		</Grid>

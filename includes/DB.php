@@ -5,7 +5,7 @@
  * @since 1.0.0
  */
 
-namespace Timetable\Includes;
+namespace Starter\Includes;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -56,13 +56,13 @@ class DB {
 			setting_value longtext NOT NULL
 		) $charset_collate;";
 
-		$sql .= "CREATE TABLE " . $prefix . "timetables (
-			timetable_id bigint(20) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-			timetable_name text NOT NULL,
-			timetable_description text NOT NULL,
+		$sql .= "CREATE TABLE " . $prefix . "starters (
+			starter_id bigint(20) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+			starter_name text NOT NULL,
+			starter_description text NOT NULL,
 			date_time datetime NOT NULL,
 			editing_with bigint(20) NOT NULL,
-			timetable_data longtext NOT NULL
+			starter_data longtext NOT NULL
 		) $charset_collate;";
 
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );

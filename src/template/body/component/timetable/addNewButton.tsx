@@ -27,7 +27,7 @@ const AddNewButton = () => {
 				variant="outlined"
 				startIcon={ <AddCircleOutlineIcon /> }
 			>
-				{ __( 'Add New', 'timetable' ) }
+				{ __( 'Add New', 'starter' ) }
 			</Button>
 			<Modal
 				open={ open }
@@ -43,9 +43,9 @@ const AddNewButton = () => {
 				>
 					<FormControl fullWidth variant="filled">
 						<TextField
-							className="timetable-field"
-							id="timetable-field"
-							label={ __( 'Timetable Name', 'timetable' ) }
+							className="starter-field"
+							id="starter-field"
+							label={ __( 'Starter Name', 'starter' ) }
 							variant="filled"
 						/>
 					</FormControl>

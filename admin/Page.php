@@ -5,7 +5,7 @@
  * @since 1.0.0
  */
 
-namespace Timetable\Admin;
+namespace Starter\Admin;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -24,14 +24,14 @@ class Page {
 	 *
 	 * @since   1.0.0
 	 */
-	public $name = 'Timetable';
+	public $name = 'Starter';
 
 	/**
 	 * Instance of this class.
 	 *
 	 * @since   1.0.0
 	 */
-	public $slug = 'timetable';
+	public $slug = 'starter';
 
 
 	/**
@@ -110,8 +110,8 @@ class Page {
 	 */
 	public function add_menu_page() {
 		add_menu_page(
-			__( $this->name, 'timetable' ),
-			__( $this->name, 'timetable' ),
+			__( $this->name, 'starter' ),
+			__( $this->name, 'starter' ),
 			'manage_options',
 			$this->slug,
 			[$this, 'plugin_page'],
@@ -120,29 +120,29 @@ class Page {
 
 		add_submenu_page(
 			$this->slug,
-			__( 'Dashboard', 'timetable' ),
-			__( 'Dashboard', 'timetable' ),
+			__( 'Dashboard', 'starter' ),
+			__( 'Dashboard', 'starter' ),
 			'manage_options',
-			'timetable-dashboard',
+			'starter-dashboard',
 			[$this, 'plugin_page'],
 			1
 		);
 
 		add_submenu_page(
 			$this->slug,
-			__( 'Analytics', 'timetable' ),
-			__( 'Analytics', 'timetable' ),
+			__( 'Analytics', 'starter' ),
+			__( 'Analytics', 'starter' ),
 			'manage_options',
-			'timetable-analytics',
+			'starter-analytics',
 			[$this, 'plugin_page'],
 		);
 
 		add_submenu_page(
 			$this->slug,
-			__( 'Settings', 'timetable' ),
-			__( 'Settings', 'timetable' ),
+			__( 'Settings', 'starter' ),
+			__( 'Settings', 'starter' ),
 			'manage_options',
-			'timetable-settings',
+			'starter-settings',
 			[$this, 'plugin_page'],
 		);
 	}
@@ -153,7 +153,7 @@ class Page {
 	 * @since 1.0.0
 	 */
 	public function plugin_page() {
-		echo '<div id="timetable"></div>';
+		echo '<div id="starter"></div>';
 	}
 
 	/**
@@ -178,28 +178,28 @@ class Page {
 				];
 
 			/**
-			 * Before Timetable enqueue scripts.
+			 * Before Starter enqueue scripts.
 			 *
-			 * Fires before Timetable scripts are enqueued.
+			 * Fires before Starter scripts are enqueued.
 			 *
 			 * @since 1.0.0
 			 */
-			do_action( 'timetable/before_enqueue_scripts' );
+			do_action( 'starter/before_enqueue_scripts' );
 
-			wp_enqueue_script( 'timetable-script', $script_url, $script_asset['dependencies'], $script_asset['version'], true );
+			wp_enqueue_script( 'starter-script', $script_url, $script_asset['dependencies'], $script_asset['version'], true );
 
 			/**
-			 * After Timetable enqueue scripts.
+			 * After Starter enqueue scripts.
 			 *
-			 * Fires after Timetable scripts are enqueued.
+			 * Fires after Starter scripts are enqueued.
 			 *
 			 * @since 1.0.0
 			 */
-			do_action( 'timetable/after_enqueue_scripts' );
+			do_action( 'starter/after_enqueue_scripts' );
 
 			wp_localize_script(
-				'timetable-script',
-				'timeTableApp',
+				'starter-script',
+				'StarterApp',
 				[
 					'url'	=> esc_url_raw( rest_url() ),
 					'nonce'	=> wp_create_nonce( 'wp_rest' ),

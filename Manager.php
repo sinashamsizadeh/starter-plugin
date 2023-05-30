@@ -2,10 +2,10 @@
 /**
  * Manager.
  *
- * @package Timetable
+ * @package Starter
  */
 
-namespace Timetable;
+namespace Starter;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -62,13 +62,13 @@ final class Manager {
 	}
 
 	/**
-	 * Load the timetable dependencies.
+	 * Load the starter dependencies.
 	 *
 	 * @since 1.0.0
 	 */
 	private function setup() {
 		apply_filters(
-			'timetable/setup',
+			'starter/setup',
 			[
 				'admin_page' => Admin\Page::instance()
 			]
@@ -77,7 +77,7 @@ final class Manager {
 		/**
 		 * Plugin loaded hook
 		 */
-		do_action( 'Timetable/loaded' );
+		do_action( 'Starter/loaded' );
 	}
 
 	/**
@@ -86,7 +86,7 @@ final class Manager {
      * @since   1.0.0
      */
     public function load_plugin_textdomain() {
-        load_plugin_textdomain( 'timetable', false, basename( dirname( __FILE__ ) ) . '/languages' );
+        load_plugin_textdomain( 'starter', false, basename( dirname( __FILE__ ) ) . '/languages' );
     }
 
 }

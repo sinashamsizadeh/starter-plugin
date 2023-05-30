@@ -14,7 +14,7 @@ const Dashboard = () => {
 		>
 			<Grid item xs={ 12 }>
 				<Box>
-					<h1>{ __( 'Dashboard', 'timetable' ) }</h1>
+					<h1>{ __( 'Dashboard', 'starter' ) }</h1>
 				</Box>
 			</Grid>
 		</Grid>
