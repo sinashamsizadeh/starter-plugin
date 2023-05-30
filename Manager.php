@@ -48,7 +48,6 @@ final class Manager {
 	 * @since 1.0.0
 	 */
 	private function hooks() {
-		register_activation_hook( __FILE__, [$this, 'install'] );
 		add_action( 'init', [ $this, 'load_plugin_textdomain'] );
 	}
 
@@ -58,18 +57,18 @@ final class Manager {
 	 *
 	 * @since 1.0.0
 	 */
-	private function install() {
-
+	public function install() {
+		Includes\DB::instance()->setup_tables();
 	}
 
 	/**
-	 * Load the cfb dependencies.
+	 * Load the timetable dependencies.
 	 *
 	 * @since 1.0.0
 	 */
 	private function setup() {
 		apply_filters(
-			'cfb_dependencies',
+			'timetable/setup',
 			[
 				'admin_page' => Admin\Page::instance()
 			]
@@ -89,6 +88,5 @@ final class Manager {
     public function load_plugin_textdomain() {
         load_plugin_textdomain( 'timetable', false, basename( dirname( __FILE__ ) ) . '/languages' );
     }
-
 
 }

@@ -20,6 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 define( 'TT_VERSION', '1.0.0' );
 define( 'TT_PATH', plugin_dir_path( __FILE__ ) );
 define( 'TT_URL', plugin_dir_url( __FILE__ ) );
+define( 'TT_PREFIX', 'timetable' );
 
 require TT_PATH . 'vendor/autoload.php';
 
@@ -27,9 +28,18 @@ require TT_PATH . 'vendor/autoload.php';
  * Get an instance of the Plugin class.
  *
  * @since 1.0.0
- * @return Timetable
  */
 if ( class_exists( 'Timetable\Manager' ) ) {
 
 	Timetable\Manager::instance();
 }
+
+/**
+ * Fire installation functions by plugin activation.
+ *
+ * @since 1.0.0
+ */
+function timetable_activation() {
+	Timetable\Manager::instance()->install();
+}
+register_activation_hook( __FILE__, 'timetable_activation' );
